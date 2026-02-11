@@ -1,6 +1,6 @@
-# outline-skill
+# skills
 
-`outline-skill` contains an OpenCode skill for working with Outline wiki documentation and content operations.
+This repository currently contains one OpenCode skill for working with Outline wiki documentation and content operations.
 
 ## Repository Structure
 
@@ -19,8 +19,8 @@ cp -R skills/outline-wiki-content ~/.config/opencode/skills/
 If you have not cloned this repository yet:
 
 ```bash
-gh repo clone janhoon/outline-skill
-cd outline-skill
+gh repo clone janhoon/skills
+cd skills
 mkdir -p ~/.config/opencode/skills
 cp -R skills/outline-wiki-content ~/.config/opencode/skills/
 ```
