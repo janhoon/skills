@@ -1,11 +1,14 @@
 # skills
 
-This repository currently contains one OpenCode skill for working with Outline wiki documentation and content operations.
+This repository currently contains OpenCode/OpenClaw skills for:
+- Outline wiki documentation/content operations
+- Coolify deployment and operations workflows
 
 ## Repository Structure
 
 - `skills/outline-wiki-content/SKILL.md`
 - `skills/outline-wiki-content/references/api_reference.md`
+- `skills/coolify/SKILL.md`
 
 ## Installation
 
