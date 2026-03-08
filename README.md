@@ -1,38 +1,90 @@
 # skills
 
-This repository currently contains OpenCode/OpenClaw skills for:
-- Outline wiki documentation/content operations
-- Coolify deployment and operations workflows
+A collection of OpenCode/OpenClaw skills for common development workflows.
+
+## Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| `fizzy` | Manage Fizzy kanban boards and cards via CLI. Includes the Ralph loop protocol — agent ownership tagging, Ralphing column transitions, and done state management. |
+| `outline-wiki-content` | Draft, restructure, and maintain documentation for Outline-based wikis. |
+| `coolify` | Operate Coolify-managed apps — trigger deploys, check status, update env vars, handle rollbacks. |
 
 ## Repository Structure
 
-- `skills/outline-wiki-content/SKILL.md`
-- `skills/outline-wiki-content/references/api_reference.md`
-- `skills/coolify/SKILL.md`
+```
+skills/
+├── fizzy/
+│   └── SKILL.md
+├── outline-wiki-content/
+│   ├── SKILL.md
+│   └── references/
+│       └── api_reference.md
+└── coolify/
+    └── SKILL.md
+```
 
 ## Installation
 
-Install the skill into your local OpenCode skills directory:
+### OpenClaw
 
-```bash
-mkdir -p ~/.config/opencode/skills
-cp -R skills/outline-wiki-content ~/.config/opencode/skills/
-```
-
-If you have not cloned this repository yet:
+Copy any skill into your OpenClaw workspace skills directory:
 
 ```bash
 gh repo clone janhoon/skills
 cd skills
+
+mkdir -p ~/.openclaw/workspace/skills
+cp -R skills/fizzy ~/.openclaw/workspace/skills/
+cp -R skills/outline-wiki-content ~/.openclaw/workspace/skills/
+cp -R skills/coolify ~/.openclaw/workspace/skills/
+```
+
+To install all skills at once:
+
+```bash
+cp -R skills/* ~/.openclaw/workspace/skills/
+```
+
+### OpenCode
+
+Copy any skill into your OpenCode skills directory:
+
+```bash
+gh repo clone janhoon/skills
+cd skills
+
 mkdir -p ~/.config/opencode/skills
+cp -R skills/fizzy ~/.config/opencode/skills/
 cp -R skills/outline-wiki-content ~/.config/opencode/skills/
+cp -R skills/coolify ~/.config/opencode/skills/
+```
+
+To install all skills at once:
+
+```bash
+cp -R skills/* ~/.config/opencode/skills/
 ```
 
 ## Verify Installation
 
-Confirm the files exist:
+### OpenClaw
+```bash
+ls ~/.openclaw/workspace/skills/
+```
+
+### OpenCode
+```bash
+ls ~/.config/opencode/skills/
+```
+
+## Updating
+
+To pull the latest version of all skills:
 
 ```bash
-ls ~/.config/opencode/skills/outline-wiki-content
-ls ~/.config/opencode/skills/outline-wiki-content/references
+cd ~/path/to/skills
+git pull
+cp -R skills/* ~/.openclaw/workspace/skills/    # OpenClaw
+cp -R skills/* ~/.config/opencode/skills/        # OpenCode
 ```
